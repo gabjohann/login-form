@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Source Code Pro", sans-serif;
+    background: none;
+}
+
+body 
+{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+
+main.container
+{
+    background: rgba(255, 255, 255, 0.616);
+    max-width: 350px;
+    min-height: 50vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+main h2
+{
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/*
+main h2::before
+{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 2.5px;
+    left: 0;
+    border-radius: 8px;
+    background: black;
+}
+*/
+
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field
+{
+    position: relative;
+}
+
+form .input-field:first-child
+{
+    margin-bottom: 1rem;
+}
+
+.input-field .underline::before
+{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #54a5d1;
+}
+
+.input-field .underline::after
+{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: blue;
+    transform: scaleX(0);
+    transition: all .2s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after
+{
+    transform: scaleX(1);
+}
+
+.input-field input
+{
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: none;
+}
+
+.input-field input::placeholder
+{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input[type="submit"]
+{
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: #4158D0;
+    cursor: pointer;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+form input[type="submit"]:hover
+{  
+    letter-spacing: 0.5px;
+    background: #54a5d1;
+}
+
+.footer
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span
+{
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer .social-field
+{
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.footer .social-field a i
+{
+    margin: 0 0.4rem;
+    width: 14px;
+}
+
+.footer .social-field a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.gmail
+{
+    background: #4682B4;
+}
+
+.footer .social-field.facebook
+{
+    background: #4682B4;
+}
+
+.footer .social-field.twitter
+{
+    background: #4682B4;
+}
